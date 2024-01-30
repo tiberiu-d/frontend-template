@@ -13,6 +13,13 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("../public/mainLogo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -350px -600px;
+  box-sizing: border-box;
+}
 
 @layer base {
   :root {

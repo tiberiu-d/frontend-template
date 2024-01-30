@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 import { Card} from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
+// components
+import MenuBar from "@/components/menu/bar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,8 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("p-5 flex items-center justify-center", appFont.className)}>
-        <Card className="w-full h-full grow flex flex-col gap-1 shadow-xl border">
-          <div className="px-3 bg-slate-100 rounded-t-xl border-b py-1">menu bar</div>
+        <Card className="w-full h-full grow flex flex-col gap-1 shadow-xl border bg-white bg-opacity-95">
+          <div className="px-3 bg-slate-100 rounded-t-xl border-b">
+            <MenuBar />
+          </div>
           <div className="grow flex flex-col gap-5 px-2">
             {children}
           </div>
