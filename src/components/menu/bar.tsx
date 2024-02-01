@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+// 3rd party components
 import {
   Menubar,
   MenubarContent,
@@ -8,7 +11,14 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 
-import Link from "next/link";
+// icons
+import {
+  GraduationCapIcon,
+  TextSearchIcon,
+  ArrowUpRightFromSquareIcon,
+  FilePlus2Icon,
+  LogOutIcon,
+} from "lucide-react";
 
 const MenuBar = () => {
   return (
@@ -19,18 +29,23 @@ const MenuBar = () => {
           <MenubarContent>
             <Link href="/">
               <MenubarItem>
+                <FilePlus2Icon className="h-4 w-4 mr-2" />
                 New ...<MenubarShortcut>⌘N</MenubarShortcut>
               </MenubarItem>
             </Link>
             <Link href="/">
               <MenubarItem>
+                <ArrowUpRightFromSquareIcon className="h-4 w-4 mr-2" />
                 Open ...<MenubarShortcut>⌘E</MenubarShortcut>
               </MenubarItem>
             </Link>
             <MenubarSeparator />
             <Link href="/">
-              <MenubarItem>
-                Quit app<MenubarShortcut>⌘X</MenubarShortcut>
+              <MenubarItem className="hover:text-red-400">
+                <div className="w-full flex items-center hover:text-red-400">
+                  <LogOutIcon className="h-4 w-4 mr-2" />
+                  Quit app<MenubarShortcut>⌘X</MenubarShortcut>
+                </div>
               </MenubarItem>
             </Link>
           </MenubarContent>
@@ -40,6 +55,7 @@ const MenuBar = () => {
           <MenubarContent>
             <Link href="/">
               <MenubarItem>
+                <TextSearchIcon className="h-4 w-4 mr-2" />
                 Find ...<MenubarShortcut>⌘F</MenubarShortcut>
               </MenubarItem>
             </Link>
@@ -50,6 +66,7 @@ const MenuBar = () => {
           <MenubarContent>
             <Link href="/">
               <MenubarItem>
+                <GraduationCapIcon className="h-4 w-4 mr-2" />
                 Masterdata
               </MenubarItem>
             </Link>
@@ -60,7 +77,7 @@ const MenuBar = () => {
         Application Name
       </div>
     </Menubar>
-  )
-}
+  );
+};
 
 export default MenuBar;
