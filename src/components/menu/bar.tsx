@@ -10,14 +10,19 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import { Input } from "../ui/input";
 
 // icons
 import {
+  Search,
+  MailQuestionIcon,
+  LayoutDashboardIcon,
   GraduationCapIcon,
   TextSearchIcon,
   ArrowUpRightFromSquareIcon,
   FilePlus2Icon,
   LogOutIcon,
+  BadgeInfoIcon,
 } from "lucide-react";
 
 const MenuBar = () => {
@@ -66,8 +71,39 @@ const MenuBar = () => {
           <MenubarContent>
             <Link href="/">
               <MenubarItem>
+                <LayoutDashboardIcon className="h-4 w-4 mr-2" />
+                Dashboard <MenubarShortcut>⌘1</MenubarShortcut>
+              </MenubarItem>
+            </Link>
+            <MenubarSeparator />
+            <Link href="/masterdata">
+              <MenubarItem>
                 <GraduationCapIcon className="h-4 w-4 mr-2" />
                 Masterdata
+              </MenubarItem>
+            </Link>
+          </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+          <MenubarTrigger className="hover:bg-slate-200">Help</MenubarTrigger>
+          <MenubarContent>
+            <form>
+              <div className="relative">
+                <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input placeholder="Search" className="pl-8" />
+              </div>
+            </form>
+            <MenubarSeparator />
+            <Link href="/">
+              <MenubarItem>
+                <MailQuestionIcon className="h-4 w-4 mr-2" />
+                Contact QDM
+              </MenubarItem>
+            </Link>
+            <Link href="/">
+              <MenubarItem>
+                <BadgeInfoIcon className="h-4 w-4 mr-2" />
+                About ...
               </MenubarItem>
             </Link>
           </MenubarContent>
