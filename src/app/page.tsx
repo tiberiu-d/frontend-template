@@ -11,7 +11,7 @@ export default function Home() {
         <div className="pr-2">panel 1</div>
       </ResizablePanel>
       <ResizableHandle withHandle />
-      <ResizablePanel>
+      <ResizablePanel defaultSize={75}>
         <div className="pl-2">panel 2</div>
       </ResizablePanel>
     </ResizablePanelGroup>
