@@ -19,7 +19,7 @@ body {
   background-size: cover;
   background-position: -350px -600px;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 @layer base {

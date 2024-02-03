@@ -15,6 +15,7 @@ import { Input } from "../ui/input";
 // icons
 import {
   Search,
+  SettingsIcon,
   MailQuestionIcon,
   LayoutDashboardIcon,
   GraduationCapIcon,
@@ -23,6 +24,7 @@ import {
   FilePlus2Icon,
   LogOutIcon,
   BadgeInfoIcon,
+  ClipboardTypeIcon,
 } from "lucide-react";
 
 const MenuBar = () => {
@@ -44,7 +46,14 @@ const MenuBar = () => {
                 Open ...<MenubarShortcut>⌘E</MenubarShortcut>
               </MenubarItem>
             </Link>
-            <MenubarSeparator />
+            <MenubarSeparator className="bg-gray-200" />
+            <Link href="/">
+              <MenubarItem>
+                <SettingsIcon className="h-4 w-4 mr-2" />
+                Settings<MenubarShortcut>⌘,</MenubarShortcut>
+              </MenubarItem>
+            </Link>
+            <MenubarSeparator className="bg-gray-200" />
             <Link href="/">
               <MenubarItem className="hover:text-red-400">
                 <div className="w-full flex items-center hover:text-red-400">
@@ -75,7 +84,13 @@ const MenuBar = () => {
                 Dashboard <MenubarShortcut>⌘1</MenubarShortcut>
               </MenubarItem>
             </Link>
-            <MenubarSeparator />
+            <Link href="/">
+              <MenubarItem>
+                <ClipboardTypeIcon className="h-4 w-4 mr-2" />
+                Reports <MenubarShortcut>⌘2</MenubarShortcut>
+              </MenubarItem>
+            </Link>
+            <MenubarSeparator className="bg-gray-200" />
             <Link href="/masterdata">
               <MenubarItem>
                 <GraduationCapIcon className="h-4 w-4 mr-2" />
