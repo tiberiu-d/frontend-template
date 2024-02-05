@@ -26,77 +26,103 @@ import {
   BadgeInfoIcon,
   ClipboardTypeIcon,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const MenuBar = () => {
+  const isDisabled = true;
   return (
-    <Menubar className="bg-slate-100 flex items-center justify-between">
+    <Menubar className="flex items-center justify-between bg-slate-100">
       <div className="flex items-center justify-center">
         <MenubarMenu>
           <MenubarTrigger className="hover:bg-slate-200">File</MenubarTrigger>
           <MenubarContent>
-            <Link href="/">
-              <MenubarItem>
-                <FilePlus2Icon className="h-4 w-4 mr-2" />
+            <MenubarItem disabled={isDisabled}>
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <FilePlus2Icon className="mr-2 h-4 w-4" />
                 New ...<MenubarShortcut>⌘N</MenubarShortcut>
-              </MenubarItem>
-            </Link>
-            <Link href="/">
-              <MenubarItem>
-                <ArrowUpRightFromSquareIcon className="h-4 w-4 mr-2" />
+              </Link>
+            </MenubarItem>
+            <MenubarItem disabled={isDisabled}>
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <ArrowUpRightFromSquareIcon className="mr-2 h-4 w-4" />
                 Open ...<MenubarShortcut>⌘E</MenubarShortcut>
-              </MenubarItem>
-            </Link>
+              </Link>
+            </MenubarItem>
             <MenubarSeparator className="bg-gray-200" />
-            <Link href="/">
-              <MenubarItem>
-                <SettingsIcon className="h-4 w-4 mr-2" />
+            <MenubarItem>
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <SettingsIcon className="mr-2 h-4 w-4" />
                 Settings<MenubarShortcut>⌘,</MenubarShortcut>
-              </MenubarItem>
-            </Link>
+              </Link>
+            </MenubarItem>
             <MenubarSeparator className="bg-gray-200" />
-            <Link href="/">
-              <MenubarItem className="hover:text-red-400">
-                <div className="w-full flex items-center hover:text-red-400">
-                  <LogOutIcon className="h-4 w-4 mr-2" />
+            <MenubarItem className="hover:text-red-400">
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <div className="flex w-full items-center hover:text-red-400">
+                  <LogOutIcon className="mr-2 h-4 w-4" />
                   Quit app<MenubarShortcut>⌘X</MenubarShortcut>
                 </div>
-              </MenubarItem>
-            </Link>
+              </Link>
+            </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className="hover:bg-slate-200">Edit</MenubarTrigger>
           <MenubarContent>
-            <Link href="/">
-              <MenubarItem>
-                <TextSearchIcon className="h-4 w-4 mr-2" />
+            <MenubarItem disabled={isDisabled}>
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <TextSearchIcon className="mr-2 h-4 w-4" />
                 Find ...<MenubarShortcut>⌘F</MenubarShortcut>
-              </MenubarItem>
-            </Link>
+              </Link>
+            </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
           <MenubarTrigger className="hover:bg-slate-200">View</MenubarTrigger>
           <MenubarContent>
-            <Link href="/">
-              <MenubarItem>
-                <LayoutDashboardIcon className="h-4 w-4 mr-2" />
+            <MenubarItem>
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <LayoutDashboardIcon className="mr-2 h-4 w-4" />
                 Dashboard <MenubarShortcut>⌘1</MenubarShortcut>
-              </MenubarItem>
-            </Link>
-            <Link href="/">
-              <MenubarItem>
-                <ClipboardTypeIcon className="h-4 w-4 mr-2" />
+              </Link>
+            </MenubarItem>
+            <MenubarItem disabled={isDisabled}>
+              <Link
+                href="/"
+                className="items flex w-full items-center justify-between"
+              >
+                <ClipboardTypeIcon className="mr-2 h-4 w-4" />
                 Reports <MenubarShortcut>⌘2</MenubarShortcut>
-              </MenubarItem>
-            </Link>
+              </Link>
+            </MenubarItem>
             <MenubarSeparator className="bg-gray-200" />
-            <Link href="/masterdata">
-              <MenubarItem>
-                <GraduationCapIcon className="h-4 w-4 mr-2" />
+            <MenubarItem>
+              <Link
+                href="/masterdata"
+                className="items flex w-full items-center justify-start"
+              >
+                <GraduationCapIcon className="mr-2 h-4 w-4" />
                 Masterdata
-              </MenubarItem>
-            </Link>
+              </Link>
+            </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
         <MenubarMenu>
@@ -111,20 +137,20 @@ const MenuBar = () => {
             <MenubarSeparator />
             <Link href="/">
               <MenubarItem>
-                <MailQuestionIcon className="h-4 w-4 mr-2" />
+                <MailQuestionIcon className="mr-2 h-4 w-4" />
                 Contact QDM
               </MenubarItem>
             </Link>
             <Link href="/">
               <MenubarItem>
-                <BadgeInfoIcon className="h-4 w-4 mr-2" />
+                <BadgeInfoIcon className="mr-2 h-4 w-4" />
                 About ...
               </MenubarItem>
             </Link>
           </MenubarContent>
         </MenubarMenu>
       </div>
-      <div className="pr-3 text-lg font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+      <div className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text pr-3 text-lg font-bold text-transparent">
         Application Name
       </div>
     </Menubar>
