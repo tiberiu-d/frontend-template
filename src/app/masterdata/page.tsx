@@ -1,5 +1,5 @@
 const Masterdata = () => {
-  return <div>Masterdata</div>;
+  return <div>Masterdata Page</div>;
 };
 
 export default Masterdata;
