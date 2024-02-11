@@ -26,11 +26,12 @@ const MainContent = () => {
       </main>
       {showModal && (
         <Modal
-          title="hellow world"
+          title="Modal Title"
+          size="md"
           onClose={handleToggleModal}
           onOk={handleOnOk}
         >
-          hello world
+          modal content goes here
         </Modal>
       )}
     </>

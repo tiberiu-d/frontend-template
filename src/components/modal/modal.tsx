@@ -5,22 +5,30 @@ import { useRef } from "react";
 
 // graphical stuff
 import { Button } from "@/components/ui/button";
-import { Card, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 // icons
-import { CheckCircleIcon } from "lucide-react";
+import { CheckCircleIcon, CircleOffIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 // props definition (if applicable)
 type ModalProps = {
   title: string;
+  size: string;
   children?: React.ReactNode;
   // functions
   onClose: () => void;
   onOk: () => void;
 };
 
-export default function Modal({ title, children, onClose, onOk }: ModalProps) {
+export default function Modal({
+  title,
+  children,
+  size,
+  onClose,
+  onOk,
+}: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
 
   // handlers
@@ -44,20 +52,30 @@ export default function Modal({ title, children, onClose, onOk }: ModalProps) {
       id="modal-backdrop"
       ref={modalRef}
       onClick={closeModal}
-      className="fixed inset-0 z-10 flex flex-col items-center justify-center bg-black/5 backdrop-blur-sm"
+      className="fixed inset-0 z-10 flex flex-col items-center justify-center bg-black/5 backdrop-blur-xs"
     >
-      <Card className="w-[500px] bg-white shadow-2xl">
-        <CardTitle className="p-3 text-xl">{title}</CardTitle>
+      <Card
+        className={cn(
+          " bg-white shadow-2xl",
+          size === "md" && "w-[550px]",
+          size === "xl" && "w-[900px]",
+        )}
+      >
+        <CardTitle className="p-4 text-xl">{title}</CardTitle>
         <Separator />
-        <CardContent className="flex flex-col gap-4 py-3">
-          <div>{children}</div>
-          <div className="flex items-center justify-end gap-4">
-            <Button size="sm" onClick={handleOnOk}>
-              Done
-              <CheckCircleIcon className="ml-2 h-5 w-4" />
-            </Button>
-          </div>
+        <CardContent className="flex flex-col gap-4 py-3 shadow-md">
+          <div className="min-h-[200px] p-0">{children}</div>
         </CardContent>
+        <div className="flex items-center justify-end gap-4 p-4">
+          <Button size="sm" onClick={handleOnClose}>
+            <CircleOffIcon className="mr-2 h-5 w-4 text-red-500" />
+            Cancel
+          </Button>
+          <Button size="sm" onClick={handleOnOk}>
+            Done
+            <CheckCircleIcon className="ml-2 h-5 w-4 text-green-500" />
+          </Button>
+        </div>
       </Card>
     </div>
   );
