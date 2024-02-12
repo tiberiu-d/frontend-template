@@ -7,6 +7,7 @@ const appFont = Roboto({ subsets: ["latin"], weight: ["400"] });
 export const metadata: Metadata = {
   title: "Template App",
   description: "template app to be used ... somewhere",
+  icons: {},
 };
 
 // imports
