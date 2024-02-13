@@ -1,4 +1,6 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 
 // 3rd party components
 import {
@@ -26,13 +28,21 @@ import {
   BadgeInfoIcon,
   ClipboardTypeIcon,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const MenuBar = () => {
   const isDisabled = true;
   return (
     <Menubar className="flex items-center justify-between bg-slate-100">
       <div className="flex items-center justify-center">
+        <Link href="/">
+          <Image
+            src="/favicon.ico"
+            alt="menu icon"
+            width={20}
+            height={20}
+            className="mr-2 rounded-full border-gray-300 hover:cursor-pointer hover:border hover:shadow-xl"
+          />
+        </Link>
         <MenubarMenu>
           <MenubarTrigger className="hover:bg-slate-200">File</MenubarTrigger>
           <MenubarContent>
