@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <ResizablePanelGroup direction="horizontal">
       <ResizablePanel collapsible defaultSize={25} minSize={25} maxSize={35}>
-        <div className="pr-2">
+        <div className="h-full pr-2">
           <Sidebar />
         </div>
       </ResizablePanel>

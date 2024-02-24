@@ -1,0 +1,221 @@
+{
+  "users": [
+    { "id": 1, "name": "John Doe", "role": "user" },
+    { "id": 2, "name": "Jane Doe", "role": "user" },
+    { "id": 3, "name": "Patrick Doe", "role": "admin" },
+    { "id": 4, "name": "Adolf Doe", "role": "user" }
+  ],
+  "ktls": [
+    {
+      "id": 1,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 2,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 3,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 4,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 5,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 6,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 7,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 8,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 9,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 10,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 11,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 12,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 13,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": 14,
+      "uuid": "12837kjoiasud98y3oisk943",
+      "customer": "Volkswagen A.G.",
+      "ktl": "B 0100 0444941",
+      "duns": "654663731",
+      "supplier": "5GS",
+      "release_date": "06.06.2023",
+      "version": "1",
+      "content": {
+        "lines": 1,
+        "problems": 1,
+        "warnings": 0
+      }
+    }
+  ],
+  "objects": []
+}

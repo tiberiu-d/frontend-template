@@ -9,8 +9,9 @@ import { Card, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 // icons
-import { CheckCircleIcon, CircleOffIcon } from "lucide-react";
+import { CheckCircleIcon, CircleOffIcon, Scroll } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ScrollArea } from "../ui/scroll-area";
 
 // props definition (if applicable)
 type ModalProps = {
@@ -64,7 +65,11 @@ export default function Modal({
         <CardTitle className="p-4 text-xl">{title}</CardTitle>
         <Separator />
         <CardContent className="flex flex-col gap-4 py-3 shadow-md">
-          <div className="min-h-[200px] p-0">{children}</div>
+          <ScrollArea>
+            <div className="ml-3 max-h-[250px] pr-3 text-justify">
+              {children}
+            </div>
+          </ScrollArea>
         </CardContent>
         <div className="flex items-center justify-end gap-4 p-4">
           <Button size="sm" onClick={handleOnClose}>
