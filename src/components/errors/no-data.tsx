@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NoDataImg from "@/public/no-data.jpg";
+import NoDataImg from "@/public/errors/no-data.jpg";
 
 type NoDataProps = {
   data: { description: string; message?: string; name?: string };

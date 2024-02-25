@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { ScrollArea } from "../ui/scroll-area";
 import { CircularProgress } from "@nextui-org/react";
+import { ScrollShadow } from "@nextui-org/react";
 
 import KTLCard from "../KTL/card";
 
@@ -71,11 +72,13 @@ const Sidebar = () => {
           voluptatem sint temporibus natus mollitia nobis numquam.
         </div>
         <ScrollArea className="flex-grow pr-2">
-          <div className="flex flex-col gap-3 py-2">
-            {data.map((ktl) => (
-              <KTLCard key={ktl.id} data={ktl} />
-            ))}
-          </div>
+          <ScrollShadow className="h-full w-full">
+            <div className="flex flex-col gap-3 py-2">
+              {data.map((ktl) => (
+                <KTLCard key={ktl.id} data={ktl} />
+              ))}
+            </div>
+          </ScrollShadow>
         </ScrollArea>
       </div>
     );
