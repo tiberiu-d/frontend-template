@@ -2,8 +2,13 @@
 
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import KTLCard from "../KTL/card";
 import { ScrollArea } from "../ui/scroll-area";
+import { CircularProgress } from "@nextui-org/react";
+
+import KTLCard from "../KTL/card";
+
+import NoDataError from "../errors/no-data";
+import GeneralError from "../errors/error";
 
 type KTL = {
   id: number;
@@ -23,7 +28,7 @@ type KTL = {
 
 const Sidebar = () => {
   // query for the data
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ["ktls_sidebar"],
     queryFn: async () => {
       const TARGET = `${process.env.NEXT_PUBLIC_API_TARGET}/ktls`;
@@ -33,9 +38,26 @@ const Sidebar = () => {
   });
 
   // conditional returns (loading, error, data or no data)
-  if (isLoading) return <div>data is being loaded</div>;
+  if (isLoading)
+    return (
+      <div className="flex h-full w-full flex-col items-center justify-center">
+        <CircularProgress
+          size="lg"
+          className="text-sm"
+          label="loading data..."
+        />
+      </div>
+    );
 
-  if (isError) return <div>something went wrong</div>;
+  if (isError) {
+    const errorMessage = {
+      description: "something went very wrong",
+      message: error.message,
+      name: error.name,
+    };
+
+    return <GeneralError data={errorMessage} />;
+  }
 
   if (data && data.length > 0)
     return (
@@ -58,7 +80,10 @@ const Sidebar = () => {
       </div>
     );
 
-  return <div>database returns no records</div>;
+  const errorMessage = {
+    description: "database returned no records",
+  };
+  return <NoDataError data={errorMessage} />;
 };
 
 export default Sidebar;
