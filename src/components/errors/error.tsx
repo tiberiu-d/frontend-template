@@ -8,7 +8,7 @@ type ErrorProps = {
 const GeneralError = (error: ErrorProps) => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
-      <Image src={ErrorImg} alt="no data found" width={75} height={75} />
+      <Image src={ErrorImg} alt="no data found" width={25} height={25} />
       <p className="py-2">{error.data.description}</p>
       {error.data.name && (
         <div className="font-semibold">{error.data.name}</div>
